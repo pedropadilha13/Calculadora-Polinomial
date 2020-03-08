@@ -1,2 +1,7 @@
-# Calculadora-Polinomial
-Calculadora de Polinômios - Disciplina de Paradigmas de Programação
+# Calculadora Polinomial
+
+#### Disciplina de Paradigmas de Programação
+
+###### Professor: Fabio Lubacheski
+
+###### Turma: 5N
