@@ -24,7 +24,7 @@ public class Main {
             switch (opcao) {
                 case 1:
                     Polinomio p = createNewPolinomio();
-                    System.out.println("Novo Polinômio criado!");
+                    System.out.println("\nNovo Polinômio criado!");
                     p.mostra();
                     polinomios.add(p);
                     break;
@@ -74,6 +74,8 @@ public class Main {
                                 System.out.println("Resultado do produto polinomial: " + produto);
                                 break;
                             case 4:
+                                polinomios.remove(polinomioEscolhido);
+                            case 5:
                                 break loopPolinimio;
                             default:
                                 System.out.println("Escolha inválida!");
@@ -139,10 +141,11 @@ public class Main {
             System.out.println("\n1) Calcular valor do Polinômio");
             System.out.println("2) Somar Polinômio");
             System.out.println("3) Multiplicar Polinômio");
-            System.out.println("4) Cancelar\n");
+            System.out.println("4) Excluir Polinômio");
+            System.out.println("5) Voltar\n");
 
-            opcao = readInt("Selecione: ", "Opção invaálida!");
-        } while (opcao < 1 || opcao > 4);
+            opcao = readInt("Selecione: ", "Opção inválida!");
+        } while (opcao < 1 || opcao > 5);
 
         return opcao;
 
@@ -152,11 +155,12 @@ public class Main {
         try {
             System.out.print(message);
             int i = teclado.nextInt();
-            teclado.nextLine();
             return i;
         } catch (InputMismatchException ime) {
             ime.printStackTrace();
             return -1;
+        } finally {
+            teclado.nextLine();
         }
     }
 
@@ -177,10 +181,11 @@ public class Main {
             System.out.print(message);
             try {
                 d = teclado.nextDouble();
-                teclado.nextLine();
             } catch (InputMismatchException ime) {
                 ime.printStackTrace();
                 d = null;
+            } finally {
+                teclado.nextLine();
             }
         } while (d < 0);
 
@@ -188,10 +193,10 @@ public class Main {
     }
 
     public static void printPolinomios(ArrayList<Polinomio> polinomios) {
+        System.out.println("\nPolinômios:");
         for (int i = 0; i < polinomios.size(); i++) {
             System.out.println((i + 1) + ") " + polinomios.get(i));
         }
-        System.out.println("\n");
     }
 
 }
