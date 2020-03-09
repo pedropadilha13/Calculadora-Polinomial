@@ -107,9 +107,10 @@ public class Polinomio {
     }
 
     /**
-     * Imprime o Polinômio na tela
+     * Monta o Polinômio para exibição
      */
-    public void mostra() {
+    @Override
+    public String toString() {
         String s = "P(x) =";
 
         for (int i = grau; i >= 0; i--) {
@@ -128,7 +129,14 @@ public class Polinomio {
 
         }
 
-        System.out.println(s);
+        return s;
+    }
+
+    /**
+     * Imprime o Polinômio na tela
+     */
+    public void mostra() {
+        System.out.println(this);
     }
 
 }
