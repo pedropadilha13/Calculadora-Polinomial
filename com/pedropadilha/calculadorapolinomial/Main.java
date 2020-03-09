@@ -1,3 +1,14 @@
+/*
+Entrega de trabalho - Calculadora Polinomial
+
+Eu, Pedro Padilha Farroco, declaro que
+
+todas as respostas são fruto do meu próprio trabalho,
+não copiei respostas de colegas externos à equipe,
+não disponibilizei minhas respostas para colegas externos à equipe e
+não realizei quaisquer outras atividades desonestas para me beneficiar ou prejudicar outros.
+*/
+
 package com.pedropadilha.calculadorapolinomial;
 
 import java.util.ArrayList;
