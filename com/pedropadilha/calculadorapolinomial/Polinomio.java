@@ -116,14 +116,15 @@ public class Polinomio {
         for (int i = grau; i >= 0; i--) {
 
             if (termos[i] != 0) {
+
+                if (i != grau) {
+                    s += " +";
+                }
+
                 s += " " + termos[i];
 
                 if (i != 0) {
                     s += "x^" + i;
-                }
-
-                if (i != 0) {
-                    s += " + ";
                 }
             }
 
