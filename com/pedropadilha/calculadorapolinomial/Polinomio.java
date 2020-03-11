@@ -56,6 +56,24 @@ public class Polinomio {
     }
 
     /**
+     * Checa se o Polinômio é constante
+     * 
+     * @return isConstante
+     */
+    public boolean isConstante() {
+
+        boolean isConstante = true;
+        int i = this.grau;
+
+        while (isConstante && i > 0) {
+            isConstante = this.getTermo(i) == 0;
+            i--;
+        }
+
+        return isConstante;
+    }
+
+    /**
      * Calcula o valor do Polinômio a partir de uma variável x especificada
      * 
      * @param x variável a ser substituiída no Polinômio
@@ -111,7 +129,12 @@ public class Polinomio {
      */
     @Override
     public String toString() {
+
         String s = "P(x) =";
+
+        if (this.isConstante()) {
+            return s + " " + this.getTermo(0);
+        }
 
         for (int i = grau; i >= 0; i--) {
 
